@@ -18,15 +18,16 @@ With recursion, we use a lot of memory space and need to calculate same elements
 over and over again. Hence, dynamic method is better than recursion method
 */
 int fibonacci(int num) {
-	//num cannot be negative number
+	//num cannot be negative
 	if (num < 0) {
 		cout << "Please enter a possitive number\n";
 		return 0;
 	}
-	else if (num < 2) {
-			return num;
+	else if (num==1 || num == 2) {
+			return 1;
 		}
-	return (fibonacci(num - 1) + fibonacci(num - 2));
+	else
+		return (fibonacci(num - 1) + fibonacci(num - 2));
 }
 
 /*dynamic programing
